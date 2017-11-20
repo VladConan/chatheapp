@@ -17,6 +17,7 @@
 		FD67381C1FC2E19B00DC98B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD67381A1FC2E19B00DC98B2 /* LaunchScreen.storyboard */; };
 		FD6738271FC2E19B00DC98B2 /* ChatTheAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6738261FC2E19B00DC98B2 /* ChatTheAppTests.swift */; };
 		FD6738321FC2E19B00DC98B2 /* ChatTheAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6738311FC2E19B00DC98B2 /* ChatTheAppUITests.swift */; };
+		FDF14A911FC2EA9900B3E4B3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDF14A901FC2EA9900B3E4B3 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		FD6738311FC2E19B00DC98B2 /* ChatTheAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTheAppUITests.swift; sourceTree = "<group>"; };
 		FD6738331FC2E19B00DC98B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD67383F1FC2E1BD00DC98B2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FDF14A901FC2EA9900B3E4B3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		FD6738051FC2E19B00DC98B2 = {
 			isa = PBXGroup;
 			children = (
+				FDF14A901FC2EA9900B3E4B3 /* GoogleService-Info.plist */,
 				FD67383F1FC2E1BD00DC98B2 /* README.md */,
 				FD6738101FC2E19B00DC98B2 /* ChatTheApp */,
 				FD6738251FC2E19B00DC98B2 /* ChatTheAppTests */,
@@ -284,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD67381C1FC2E19B00DC98B2 /* LaunchScreen.storyboard in Resources */,
+				FDF14A911FC2EA9900B3E4B3 /* GoogleService-Info.plist in Resources */,
 				FD6738191FC2E19B00DC98B2 /* Assets.xcassets in Resources */,
 				FD6738171FC2E19B00DC98B2 /* Main.storyboard in Resources */,
 			);
@@ -375,9 +379,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChatTheAppTests/Pods-ChatTheAppTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -423,9 +434,22 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChatTheApp/Pods-ChatTheApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -628,11 +652,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY8MVA9MPY;
 				INFOPLIST_FILE = ChatTheApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vlco.ChatTheApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -644,11 +669,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY8MVA9MPY;
 				INFOPLIST_FILE = ChatTheApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vlco.ChatTheApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

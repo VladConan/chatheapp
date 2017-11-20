@@ -12,6 +12,8 @@ build.xcarchive
 *.perspectivev3
 !default.perspectivev3
 xcuserdata
+xcuserdata/
+.xcuserdatad
 ## Other
 *.xccheckout
 *.moved-aside
